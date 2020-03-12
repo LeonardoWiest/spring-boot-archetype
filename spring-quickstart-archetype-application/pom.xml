@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.github.leonardowiest</groupId>
+		<artifactId>spring-quickstart-archetype</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>spring-quickstart-archetype-application</artifactId>
+	<groupId>com.github.leonardowiest.application</groupId>
+	<name>spring-quickstart-archetype - [Application]</name>
+	<description>Archetype for creating Spring Boot application</description>
+
+	<dependencies>
+		<dependency>
+			<artifactId>spring-quickstart-archetype-util</artifactId>
+			<groupId>com.github.leonardowiest.util</groupId>
+			<version>${project.parent.version}</version>
+			<scope>provided</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<artifactId>spring-quickstart-archetype-repository</artifactId>
+			<groupId>com.github.leonardowiest.repository</groupId>
+			<version>${project.parent.version}</version>
+			<scope>provided</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<artifactId>spring-quickstart-archetype-service</artifactId>
+			<groupId>com.github.leonardowiest.service</groupId>
+			<version>${project.parent.version}</version>
+			<scope>provided</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<artifactId>spring-quickstart-archetype-rest</artifactId>
+			<groupId>com.github.leonardowiest.rest</groupId>
+			<version>${project.parent.version}</version>
+			<scope>provided</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-autoconfigure</artifactId>
+		</dependency>
+	</dependencies>
+
+</project>                                                                                                     
