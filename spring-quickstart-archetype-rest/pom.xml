@@ -13,4 +13,11 @@
 	<name>spring-quickstart-archetype - [Rest]</name>
 	<description>Archetype for creating Spring Boot application</description>
 
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+		</dependency>
+	</dependencies>
+
 </project>                                                                                                     
