@@ -16,11 +16,11 @@ import springfox.documentation.service.Parameter;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
-public class SwaggerDocumentation {
+public final class SwaggerDocumentation {
 
-	private String restPackageParam;
+	private final String restPackageParam;
 
-	private ApiInfo apiInfoParam;
+	private final ApiInfo apiInfoParam;
 
 	public SwaggerDocumentation(String restPackage, ApiInfo apiInfo) {
 
