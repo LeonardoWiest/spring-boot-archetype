@@ -31,14 +31,14 @@ public class ContactController {
 	@Autowired
 	private ContactService contactService;
 
-	@ApiOperation(value = "contacts", response = ContactDTO.class)
+	@ApiOperation(value = "Create New Contact", response = ContactDTO.class)
 	@RequestMapping(value = "contacts", method = RequestMethod.POST)
 	public ResponseEntity<ContactDTO> createNewContact(@RequestBody ContactDTO contactDTO) {
 
 		return contactService.createNewContact(contactDTO);
 	};
 
-	@ApiOperation(value = "contacts/{id}", response = ContactDTO.class)
+	@ApiOperation(value = "Update Contact with PUT", response = ContactDTO.class)
 	@RequestMapping(value = "contacts/{id}", method = RequestMethod.PUT)
 	public ResponseEntity<ContactDTO> updateContactWithPut(
 			@PathVariable @ApiParam(value = "Id contact", required = true) Long id,
@@ -47,7 +47,7 @@ public class ContactController {
 		return contactService.updateContactWithPut(id, contactDTO);
 	}
 
-	@ApiOperation(value = "contacts/{id}", response = ContactDTO.class)
+	@ApiOperation(value = "Update Contact with PATCH", response = ContactDTO.class)
 	@RequestMapping(value = "contacts/{id}", method = RequestMethod.PATCH)
 	public ResponseEntity<ContactDTO> updateContactWithPatch(
 			@PathVariable @ApiParam(value = "Id contact", required = true) Long id,
@@ -56,14 +56,14 @@ public class ContactController {
 		return contactService.updateContactWithPatch(id, contactDTO);
 	}
 
-	@ApiOperation(value = "contacts", response = ContactDTO.class)
+	@ApiOperation(value = "List All Contacts", response = ContactDTO.class)
 	@RequestMapping(value = "contacts", method = RequestMethod.GET)
 	public ResponseEntity<List<SimpleContactDTO>> getAllContacts() {
 
 		return contactService.getAllContacts();
 	}
 
-	@ApiOperation(value = "contacts/{id}", response = ContactDTO.class)
+	@ApiOperation(value = "List One Contact", response = ContactDTO.class)
 	@RequestMapping(value = "contacts/{id}", method = RequestMethod.GET)
 	public ResponseEntity<ContactDTO> getSingleContact(
 			@PathVariable @ApiParam(value = "Id contact", required = true) Long id) {
@@ -71,7 +71,7 @@ public class ContactController {
 		return contactService.getSingleContact();
 	}
 
-	@ApiOperation(value = "contacts/{id}", response = ContactDTO.class)
+	@ApiOperation(value = "Delete Contact", response = ContactDTO.class)
 	@RequestMapping(value = "contacts/{id}", method = RequestMethod.DELETE)
 	public ResponseEntity<ContactDTO> deleteContact(
 			@PathVariable @ApiParam(value = "Id contact", required = true) Long id) {
