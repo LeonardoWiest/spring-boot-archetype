@@ -18,6 +18,18 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
 		</dependency>
+
+		<dependency>
+			<artifactId>spring-quickstart-archetype-service</artifactId>
+			<groupId>com.github.leonardowiest.service</groupId>
+			<version>${project.parent.version}</version>
+		</dependency>
+
+		<dependency>
+			<artifactId>spring-quickstart-archetype-util</artifactId>
+			<groupId>com.github.leonardowiest.util</groupId>
+			<version>${project.parent.version}</version>
+		</dependency>
 	</dependencies>
 
 </project>                                                                                                     
