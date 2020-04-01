@@ -36,11 +36,20 @@ public class ContactController {
 	};
 
 	@ApiOperation(value = "contacts/{id}", response = ContactDTO.class)
-	@RequestMapping(value = "contacts/{id}", method = RequestMethod.PATCH)
-	public ResponseEntity<ContactDTO> updateContact(
+	@RequestMapping(value = "contacts/{id}", method = RequestMethod.PUT)
+	public ResponseEntity<ContactDTO> updateContactWithPut(
 			@PathVariable @ApiParam(value = "Id contact", required = true) Long id,
 			@RequestBody ContactDTO contactDTO) {
 
-		return contactService.updateContact(id, contactDTO);
+		return contactService.updateContactWithPut(id, contactDTO);
+	}
+
+	@ApiOperation(value = "contacts/{id}", response = ContactDTO.class)
+	@RequestMapping(value = "contacts/{id}", method = RequestMethod.PATCH)
+	public ResponseEntity<ContactDTO> updateContactWithPatch(
+			@PathVariable @ApiParam(value = "Id contact", required = true) Long id,
+			@RequestBody ContactDTO contactDTO) {
+
+		return contactService.updateContactWithPatch(id, contactDTO);
 	}
 }

@@ -13,5 +13,7 @@ public interface ContactService {
 
 	public ResponseEntity<ContactDTO> createNewContact(ContactDTO contactDTO);
 
-	public ResponseEntity<ContactDTO> updateContact(Long id, ContactDTO contactDTO);
+	public ResponseEntity<ContactDTO> updateContactWithPut(Long id, ContactDTO contactDTO);
+
+	public ResponseEntity<ContactDTO> updateContactWithPatch(Long id, ContactDTO contactDTO);
 }
