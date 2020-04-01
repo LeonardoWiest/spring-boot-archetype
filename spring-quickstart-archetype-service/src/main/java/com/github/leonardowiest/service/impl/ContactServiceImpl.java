@@ -40,4 +40,16 @@ public class ContactServiceImpl implements ContactService {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public ResponseEntity<ContactDTO> getSingleContact() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResponseEntity<ContactDTO> deleteContact(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

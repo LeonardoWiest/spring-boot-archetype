@@ -21,4 +21,8 @@ public interface ContactService {
 	public ResponseEntity<ContactDTO> updateContactWithPatch(Long id, ContactDTO contactDTO);
 
 	public ResponseEntity<List<SimpleContactDTO>> getAllContacts();
+
+	public ResponseEntity<ContactDTO> getSingleContact();
+
+	public ResponseEntity<ContactDTO> deleteContact(Long id);
 }

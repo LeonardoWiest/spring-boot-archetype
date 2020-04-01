@@ -62,4 +62,20 @@ public class ContactController {
 
 		return contactService.getAllContacts();
 	}
+
+	@ApiOperation(value = "contacts/{id}", response = ContactDTO.class)
+	@RequestMapping(value = "contacts/{id}", method = RequestMethod.GET)
+	public ResponseEntity<ContactDTO> getSingleContact(
+			@PathVariable @ApiParam(value = "Id contact", required = true) Long id) {
+
+		return contactService.getSingleContact();
+	}
+
+	@ApiOperation(value = "contacts/{id}", response = ContactDTO.class)
+	@RequestMapping(value = "contacts/{id}", method = RequestMethod.DELETE)
+	public ResponseEntity<ContactDTO> deleteContact(
+			@PathVariable @ApiParam(value = "Id contact", required = true) Long id) {
+
+		return contactService.deleteContact(id);
+	}
 }
