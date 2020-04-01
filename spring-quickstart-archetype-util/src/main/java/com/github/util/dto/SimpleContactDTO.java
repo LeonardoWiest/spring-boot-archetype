@@ -9,13 +9,21 @@ import io.swagger.annotations.ApiModelProperty;
  *
  */
 @ApiModel
-public class ContactDTO {
+public class SimpleContactDTO {
+
+	@ApiModelProperty(notes = "Id contact")
+	private Long id;
 
 	@ApiModelProperty(notes = "First name")
 	private String firstName;
 
-	@ApiModelProperty(notes = "Last name")
-	private String lastName;
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public String getFirstName() {
 		return firstName;
@@ -23,14 +31,6 @@ public class ContactDTO {
 
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
 	}
 
 }

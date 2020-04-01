@@ -1,8 +1,11 @@
 package com.github.leonardowiest.service;
 
+import java.util.List;
+
 import org.springframework.http.ResponseEntity;
 
 import com.github.util.dto.ContactDTO;
+import com.github.util.dto.SimpleContactDTO;
 
 /**
  * 
@@ -16,4 +19,6 @@ public interface ContactService {
 	public ResponseEntity<ContactDTO> updateContactWithPut(Long id, ContactDTO contactDTO);
 
 	public ResponseEntity<ContactDTO> updateContactWithPatch(Long id, ContactDTO contactDTO);
+
+	public ResponseEntity<List<SimpleContactDTO>> getAllContacts();
 }

@@ -1,5 +1,7 @@
 package com.github.leonardowiest.rest;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.github.leonardowiest.service.ContactService;
 import com.github.util.dto.ContactDTO;
+import com.github.util.dto.SimpleContactDTO;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -51,5 +54,12 @@ public class ContactController {
 			@RequestBody ContactDTO contactDTO) {
 
 		return contactService.updateContactWithPatch(id, contactDTO);
+	}
+
+	@ApiOperation(value = "contacts", response = ContactDTO.class)
+	@RequestMapping(value = "contacts", method = RequestMethod.GET)
+	public ResponseEntity<List<SimpleContactDTO>> getAllContacts() {
+
+		return contactService.getAllContacts();
 	}
 }
