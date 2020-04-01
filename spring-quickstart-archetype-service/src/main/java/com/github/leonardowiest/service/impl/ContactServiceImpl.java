@@ -6,11 +6,22 @@ import org.springframework.stereotype.Service;
 import com.github.leonardowiest.service.ContactService;
 import com.github.util.dto.ContactDTO;
 
+/**
+ * 
+ * @author Leonardo Wiest
+ *
+ */
 @Service
 public class ContactServiceImpl implements ContactService {
 
 	@Override
 	public ResponseEntity<ContactDTO> createNewContact(ContactDTO contactDTO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResponseEntity<ContactDTO> updateContact(Long id, ContactDTO contactDTO) {
 		// TODO Auto-generated method stub
 		return null;
 	}
