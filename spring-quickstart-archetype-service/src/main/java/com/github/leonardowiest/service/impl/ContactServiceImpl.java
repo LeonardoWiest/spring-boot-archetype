@@ -3,6 +3,7 @@ package com.github.leonardowiest.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -27,8 +28,12 @@ public class ContactServiceImpl implements ContactService {
 	public ResponseEntity<ContactDTO> createNewContact(ContactDTO contactDTO) {
 
 		Contact newContact = new Contact();
+		newContact.setFirstName(contactDTO.getFirstName());
+		newContact.setLastName(contactDTO.getLastName());
+		
+		contactRepository.saveAndFlush(newContact);
 
-		return null;
+		return new ResponseEntity<ContactDTO>(contactDTO, HttpStatus.CREATED);
 	}
 
 	@Override
