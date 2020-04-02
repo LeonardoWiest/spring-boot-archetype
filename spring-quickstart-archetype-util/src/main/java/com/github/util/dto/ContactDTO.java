@@ -2,6 +2,7 @@ package com.github.util.dto;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 
 /**
  * 
@@ -9,6 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
  *
  */
 @ApiModel
+@Data
 public class ContactDTO {
 
 	@ApiModelProperty(notes = "First name")
@@ -16,21 +18,4 @@ public class ContactDTO {
 
 	@ApiModelProperty(notes = "Last name")
 	private String lastName;
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
 }
