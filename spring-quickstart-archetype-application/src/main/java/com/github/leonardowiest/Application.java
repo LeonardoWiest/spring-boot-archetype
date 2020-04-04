@@ -12,15 +12,10 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @SpringBootApplication
-@PropertySource(ignoreResourceNotFound = false, value = "classpath:application.properties")
+//@PropertySource(ignoreResourceNotFound = false, value = "classpath:application.properties")
+//@PropertySource(ignoreResourceNotFound = false, value = "classpath:application-${spring.profiles.active}.properties")
 public class Application {
 
-	/**
-	 * 
-	 * Used to run the application
-	 * 
-	 * @param args the command line arguments
-	 */
 	public static void main(String[] args) {
 
 		SpringApplication application = new SpringApplication(Application.class);
@@ -59,7 +54,7 @@ public class Application {
 
 		log.info(
 				"\n----------------------------------------------------------\n\t"
-						+ "Application '{}' is running! Access URLs:\n\t" + "Local: \t\t{}://localhost:{}{}\n\t"
+						+ "Application '{}' is running! \n\t" + "Local: \t\t{}://localhost:{}{}\n\t"
 						+ "External: \t{}://{}:{}{}\n\t"
 						+ "Profile(s): \t{}\n----------------------------------------------------------",
 				environment.getProperty("spring.application.name"), protocol, serverPort, contextPath, protocol,
