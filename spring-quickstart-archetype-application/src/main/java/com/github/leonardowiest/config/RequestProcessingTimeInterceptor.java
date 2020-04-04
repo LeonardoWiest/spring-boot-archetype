@@ -4,16 +4,16 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
-import com.github.util.ControllerInterceptorBuilder;
+import com.github.util.CustomHandlerInterceptorBuilder;
 
 @Configuration
 @EnableAspectJAutoProxy
 public class RequestProcessingTimeInterceptor {
 
 	@Bean
-	public ControllerInterceptorBuilder build() {
+	public CustomHandlerInterceptorBuilder build() {
 
-		return new ControllerInterceptorBuilder();
+		return new CustomHandlerInterceptorBuilder();
 	}
 
 }
