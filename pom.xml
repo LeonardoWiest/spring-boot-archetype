@@ -13,7 +13,7 @@
 	<groupId>com.github.leonardowiest</groupId>
 	<artifactId>spring-quickstart-archetype</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-quickstart-archetype - [Monolithic]</name>
+	<name>spring-quickstart-archetype</name>
 	<description>Archetype for creating Spring Boot application</description>
 
 	<properties>
