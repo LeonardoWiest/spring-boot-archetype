@@ -11,4 +11,13 @@ public final class IfNull {
 
 	}
 
+	public static final <T> T get(T value, T defaultValue) {
+
+		if (value == null) {
+			return defaultValue;
+		}
+
+		return value;
+	}
+
 }
