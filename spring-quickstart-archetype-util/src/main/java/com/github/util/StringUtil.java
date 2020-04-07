@@ -11,4 +11,9 @@ public final class StringUtil {
 
 	}
 
+	public static final boolean isNullOrEmpty(final String arg) {
+
+		return IfNull.get(arg, "").equals("");
+	}
+
 }

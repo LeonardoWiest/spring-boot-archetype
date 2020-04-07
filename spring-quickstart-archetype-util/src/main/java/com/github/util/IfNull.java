@@ -11,7 +11,7 @@ public final class IfNull {
 
 	}
 
-	public static final <T> T get(T value, T defaultValue) {
+	public static final <T> T get(final T value, final T defaultValue) {
 
 		if (value == null) {
 			return defaultValue;
