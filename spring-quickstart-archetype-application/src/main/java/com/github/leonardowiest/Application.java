@@ -13,7 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 @SpringBootApplication
 public class Application {
 
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 
 		SpringApplication application = new SpringApplication(Application.class);
 
@@ -22,7 +22,7 @@ public class Application {
 		logApplicationStartup(environment);
 	}
 
-	private static void logApplicationStartup(ConfigurableEnvironment environment) {
+	private static void logApplicationStartup(final ConfigurableEnvironment environment) {
 
 		String protocol = "http";
 
