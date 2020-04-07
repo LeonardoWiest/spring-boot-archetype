@@ -5,15 +5,12 @@ import java.net.UnknownHostException;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.ConfigurableEnvironment;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @SpringBootApplication
-//@PropertySource(ignoreResourceNotFound = false, value = "classpath:application.properties")
-//@PropertySource(ignoreResourceNotFound = false, value = "classpath:application-${spring.profiles.active}.properties")
 public class Application {
 
 	public static void main(String[] args) {
@@ -53,9 +50,8 @@ public class Application {
 		}
 
 		log.info(
-				"\n----------------------------------------------------------\n\t"
-						+ "Application '{}' is running! \n\t" + "Local: \t\t{}://localhost:{}{}\n\t"
-						+ "External: \t{}://{}:{}{}\n\t"
+				"\n----------------------------------------------------------\n\t" + "Application '{}' is running! \n\t"
+						+ "Local: \t\t{}://localhost:{}{}\n\t" + "External: \t{}://{}:{}{}\n\t"
 						+ "Profile(s): \t{}\n----------------------------------------------------------",
 				environment.getProperty("spring.application.name"), protocol, serverPort, contextPath, protocol,
 				hostAddress, serverPort, contextPath, environment.getActiveProfiles());
