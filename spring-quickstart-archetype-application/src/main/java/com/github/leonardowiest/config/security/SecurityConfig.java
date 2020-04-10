@@ -1,4 +1,4 @@
-package com.github.leonardowiest.config;
+package com.github.leonardowiest.config.security;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -10,9 +10,9 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import com.github.util.AuthenticationBuilder;
 import com.github.util.HttpSecurityBuilder;
 
-@Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(securedEnabled = true, jsr250Enabled = true, prePostEnabled = true)
+@Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
