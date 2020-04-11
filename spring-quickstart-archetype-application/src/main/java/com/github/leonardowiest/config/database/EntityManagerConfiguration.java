@@ -1,6 +1,6 @@
 package com.github.leonardowiest.config.database;
 
-import static com.github.util.constants.GlobalConstants.DATASOURCE_PROPERFIES;
+import static com.github.util.constants.GlobalConstants.DATASOURCE_PROPERTIES;
 import static com.github.util.constants.GlobalConstants.DB_CONFIG_PREFIX;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -56,7 +56,7 @@ public class EntityManagerConfiguration {
 	@ConfigurationProperties(prefix = DB_CONFIG_PREFIX)
 	@Validated
 	@Primary
-	@Bean(name = DATASOURCE_PROPERFIES)
+	@Bean(name = DATASOURCE_PROPERTIES)
 	public DataSourceProperties dataSourceProperties() {
 
 		return new DataSourceProperties();
