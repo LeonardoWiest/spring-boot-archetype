@@ -1,34 +1,29 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.2.4.RELEASE</version>
-		<relativePath />
+		<version>2.2.6.RELEASE</version>
 	</parent>
 
 	<packaging>pom</packaging>
 	<groupId>com.github.leonardowiest</groupId>
-	<artifactId>spring-quickstart-archetype</artifactId>
+	<artifactId>spring-boot-archetype</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-quickstart-archetype</name>
-	<description>Archetype for creating Spring Boot application</description>
+	<name>Spring boot Archetype</name>
 
 	<properties>
 		<java.version>1.8</java.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-		<io.springfox.version>2.9.2</io.springfox.version>
+		<com.github.leonardowiest.version></com.github.leonardowiest.version>
 	</properties>
 
 	<modules>
-		<module>spring-quickstart-archetype-application</module>
-		<module>spring-quickstart-archetype-util</module>
-		<module>spring-quickstart-archetype-repository</module>
-		<module>spring-quickstart-archetype-service</module>
-		<module>spring-quickstart-archetype-rest</module>
+		<module>spring-boot-archetype-util</module>
+		<module>spring-boot-archetype-repository</module>
+		<module>spring-boot-archetype-service</module>
+		<module>spring-boot-archetype-api</module>
 	</modules>
 </project>                                                                                                          
