@@ -11,6 +11,6 @@
 
 	<artifactId>spring-boot-archetype-repository</artifactId>
 	<groupId>com.github.leonardowiest.repository</groupId>
-	<name>Spring boot Archetype - Module Repository</name>
+	<name>Spring boot Archetype - Repository</name>
 
 </project>                                                                                                     	

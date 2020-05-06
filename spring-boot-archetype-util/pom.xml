@@ -11,6 +11,6 @@
 
 	<artifactId>spring-boot-archetype-util</artifactId>
 	<groupId>com.github.leonardowiest.util</groupId>
-	<name>Spring boot Archetype - Module Util</name>
+	<name>Spring boot Archetype - Util</name>
 
 </project>                                                                                                     

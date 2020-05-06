@@ -9,8 +9,8 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>spring-boot-archetype-service</artifactId>
-	<groupId>com.github.leonardowiest.service</groupId>
-	<name>Spring boot Archetype - Service</name>
+	<artifactId>spring-boot-archetype-rest</artifactId>
+	<groupId>com.github.leonardowiest.rest</groupId>
+	<name>Spring boot Archetype - Rest</name>
 
 </project>                                                                                                     
